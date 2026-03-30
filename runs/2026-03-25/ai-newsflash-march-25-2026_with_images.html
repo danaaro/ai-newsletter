@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🔥 AI Newsflash — March 25, 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ── RESET & BASE ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:    #00D4FF;
+      --pink:    #FF006E;
+      --green:   #00FF9D;
+      --yellow:  #FFD60A;
+      --bg:      #0A0A0F;
+      --surface: rgba(10, 10, 22, 0.82);
+      --border:  rgba(255,255,255,0.08);
+      --text:    #E8E8F0;
+      --muted:   #6B6B80;
+      --radius:  14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg) url("../../AI Influencers Background.png") center top / cover fixed;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── DARK OVERLAY — keeps text readable over the background ──── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 14, 0.85);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── LAYOUT ────────────────────────────────────────────────────── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── HEADER ────────────────────────────────────────────────────── */
+    header {
+      position: relative;
+      padding: 56px 0 16px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .header-bar {
+      position: absolute;
+      top: 0; left: -24px; right: -24px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--pink), var(--blue), var(--green), transparent);
+      background-size: 200% 100%;
+      animation: slide-bar 4s linear infinite;
+    }
+    @keyframes slide-bar { 0%{background-position:0% 0} 100%{background-position:200% 0} }
+
+    /* ── BYLINE (profile photo) ────────────────────────────────────── */
+    .byline {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 8px 18px 8px 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 999px;
+      animation: fade-up 0.5s ease both;
+    }
+
+    /* ── ORBIT FRAME ───────────────────────────────────────────────── */
+    .photo-orbit {
+      position: relative;
+      width: 64px; height: 64px;
+      flex-shrink: 0;
+    }
+    .byline-photo {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 0 14px rgba(0,212,255,0.2);
+    }
+    /* neon ring */
+    .photo-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0,212,255,0.55);
+      box-shadow: 0 0 8px rgba(0,212,255,0.35), 0 0 20px rgba(0,212,255,0.15), inset 0 0 8px rgba(0,212,255,0.08);
+    }
+    /* rotating arm */
+    .orbit-spinner {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      animation: orbit-spin 2.8s linear infinite;
+    }
+    /* the glowing ball */
+    .orbit-ball {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff, var(--blue));
+      box-shadow: 0 0 6px var(--blue), 0 0 14px rgba(0,212,255,0.8), 0 0 24px rgba(0,212,255,0.4);
+    }
+    @keyframes orbit-spin {
+      from { transform: rotate(0deg);   }
+      to   { transform: rotate(360deg); }
+    }
+    .byline-info {
+      text-align: left;
+    }
+    .byline-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .byline-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff, var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,0,110,0.12);
+      border: 1px solid rgba(255,0,110,0.35);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--pink);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      animation: fade-up 0.6s 0.05s ease both;
+    }
+    .live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--pink);
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100%{opacity:1;transform:scale(1)}
+      50%{opacity:0.3;transform:scale(0.7)}
+    }
+
+    .header-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(38px, 7vw, 72px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      background: linear-gradient(135deg, #fff 0%, var(--blue) 45%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fade-up 0.7s 0.1s ease both;
+    }
+
+    .header-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+      animation: fade-up 0.7s 0.2s ease both;
+    }
+
+    .header-sub {
+      margin-top: 14px;
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(232,232,240,0.55);
+      letter-spacing: 0.02em;
+      animation: fade-up 0.7s 0.3s ease both;
+    }
+
+    .header-divider {
+      width: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 16px auto 0;
+      animation: fade-up 0.7s 0.4s ease both;
+    }
+
+    /* ── SECTION ───────────────────────────────────────────────────── */
+    section {
+      margin-top: 32px;
+      animation: fade-up 0.7s ease both;
+    }
+    section:nth-child(1) { animation-delay: 0.3s }
+    section:nth-child(2) { animation-delay: 0.4s }
+    section:nth-child(3) { animation-delay: 0.5s }
+    section:nth-child(4) { animation-delay: 0.6s }
+    section:nth-child(5) { animation-delay: 0.7s }
+    section:nth-child(6) { animation-delay: 0.8s }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon { font-size: 22px; line-height: 1; }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .section-title.blue  { background: linear-gradient(90deg, #fff, var(--blue));  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.green { background: linear-gradient(90deg, #fff, var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.gold  { background: linear-gradient(90deg, #fff, var(--yellow));-webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.spicy { background: linear-gradient(90deg, var(--pink), var(--yellow)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+    .section-count {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── CARD ──────────────────────────────────────────────────────── */
+    .card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 20px 18px 22px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: border-color 0.25s, transform 0.25s, background 0.25s;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 56px;
+      grid-template-rows: auto auto auto auto;
+      column-gap: 16px;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .card:hover {
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(10, 10, 22, 0.92);
+      transform: translateY(-2px);
+    }
+    .card.accent-blue  { border-left: 3px solid var(--blue);  }
+    .card.accent-green { border-left: 3px solid var(--green); }
+    .card.accent-gold  { border-left: 3px solid var(--yellow);}
+    .card.accent-spicy { border-left: 3px solid var(--pink);  }
+
+    /* grid placement */
+    .card-headline { grid-column: 1; grid-row: 1; }
+    .card-what     { grid-column: 1; grid-row: 2; }
+    .card-why      { grid-column: 1; grid-row: 3; }
+    .card-footer   { grid-column: 1; grid-row: 4; }
+    .card-logo     { grid-column: 2; grid-row: 1 / 3; align-self: start; justify-self: center; }
+
+    /* ── CARD LOGO ──────────────────────────────────────────────────── */
+    .card-logo {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .card-logo img {
+      width: 36px; height: 36px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .card-logo .logo-fallback {
+      font-size: 22px;
+      line-height: 1;
+    }
+    /* dual logos side by side */
+    .card-logo.dual {
+      flex-direction: column;
+      gap: 3px;
+      padding: 4px;
+    }
+    .card-logo.dual img { width: 22px; height: 22px; }
+
+    .card-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 9px;
+    }
+    .card-what {
+      font-size: 13.5px;
+      color: rgba(232,232,240,0.72);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .card-why {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 11px;
+      border-radius: 8px;
+      margin-bottom: 11px;
+      line-height: 1.5;
+    }
+    .why-blue  { background: rgba(0,212,255,0.07);  border-left: 2px solid rgba(0,212,255,0.5);  color: #7DE8FF; }
+    .why-green { background: rgba(0,255,157,0.07);  border-left: 2px solid rgba(0,255,157,0.5);  color: #7DFFCC; }
+    .why-gold  { background: rgba(255,214,10,0.07); border-left: 2px solid rgba(255,214,10,0.5); color: #FFE566; }
+    .why-spicy { background: rgba(255,0,110,0.07);  border-left: 2px solid rgba(255,214,10,0.5); color: #FF9E4A; }
+
+    .why-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-right: 6px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* ── SOURCE PILL ───────────────────────────────────────────────── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .pill:hover { opacity: 0.75; transform: scale(0.97); }
+    .pill-blue  { background: rgba(0,212,255,0.10);  border: 1px solid rgba(0,212,255,0.25);  color: var(--blue);  }
+    .pill-green { background: rgba(0,255,157,0.10);  border: 1px solid rgba(0,255,157,0.25);  color: var(--green); }
+    .pill-gold  { background: rgba(255,214,10,0.10); border: 1px solid rgba(255,214,10,0.25); color: var(--yellow);}
+    .pill-spicy { background: rgba(255,100,0,0.10);  border: 1px solid rgba(255,100,0,0.25);  color: #FF9E4A; }
+    .pill::before { content: '↗'; font-size: 9px; }
+
+    /* ── GOSSIP TAG ────────────────────────────────────────────────── */
+    .gossip-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--pink), var(--yellow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border: 1px solid rgba(255,0,110,0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    /* shift headline down when gossip-tag present */
+    .card.has-tag .card-headline { grid-row: 2; }
+    .card.has-tag .card-what     { grid-row: 3; }
+    .card.has-tag .card-why      { grid-row: 4; }
+    .card.has-tag .card-footer   { grid-row: 5; }
+    .card.has-tag .card-logo     { grid-row: 1 / 4; }
+
+    /* ── TLDR ──────────────────────────────────────────────────────── */
+    .tldr {
+      margin-top: 52px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(255,0,110,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 32px 36px;
+      position: relative;
+      overflow: hidden;
+      animation: fade-up 0.7s 0.9s ease both;
+    }
+    .tldr::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.03), transparent 50%, rgba(255,0,110,0.03));
+      border-radius: 18px;
+    }
+    .tldr-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+    .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .tldr-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: rgba(232,232,240,0.85);
+    }
+    .tldr-list li::before {
+      content: '→';
+      color: var(--blue);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      animation: fade-up 0.7s 1s ease both;
+    }
+    footer span { color: var(--pink); }
+
+    /* ── PDF BUTTON ────────────────────────────────────────────────── */
+    .pdf-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(255,0,110,0.15));
+      border: 1px solid rgba(0,212,255,0.35);
+      border-radius: 999px;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.25s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 20px rgba(0,212,255,0.1);
+      animation: fade-up 0.7s 1.1s ease both;
+    }
+    .pdf-btn:hover {
+      background: linear-gradient(135deg, rgba(0,212,255,0.25), rgba(255,0,110,0.25));
+      border-color: rgba(0,212,255,0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 30px rgba(0,212,255,0.2);
+    }
+    .pdf-btn:active { transform: scale(0.97); }
+    .pdf-btn-icon { font-size: 14px; }
+
+    /* ── ANIMATIONS ────────────────────────────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    /* ── SCROLLBAR ─────────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+    ::selection { background: rgba(0,212,255,0.25); color: #fff; }
+
+    /* ── PRINT / PDF ───────────────────────────────────────────────── */
+    @media print {
+      @page { margin: 15mm 12mm; size: A4; }
+
+      body {
+        background: #0A0A0F !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+        font-size: 13px;
+      }
+
+      .orb, body::before { display: none; }
+
+      .pdf-btn { display: none !important; }
+
+      .page { padding: 0 8px 20px; max-width: 100%; }
+
+      header { padding: 20px 0 24px; }
+
+      .header-bar { animation: none; }
+      .live-dot   { animation: none; }
+
+      section { margin-top: 28px; }
+
+      .card {
+        break-inside: avoid;
+        margin-bottom: 8px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .tldr { break-inside: avoid; }
+    }
+  
+    .card.has-hero { grid-template-columns: 1fr; padding-top: 0; }
+    .card-hero { grid-column: 1 / -1; grid-row: 1; position: relative; height: 165px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; margin-bottom: 16px; }
+    .card-hero > img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s ease; }
+    .card:hover .card-hero > img { transform: scale(1.04); }
+    .card-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, var(--surface) 100%); pointer-events: none; }
+    .card-hero-logo { position: absolute; bottom: 10px; right: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 10px; background: rgba(8,8,14,0.80); border: 1px solid rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; overflow: hidden; backdrop-filter: blur(10px); }
+    .card-hero-logo img { width: 26px; height: 26px; object-fit: contain; border-radius: 4px; }
+    .card-hero-logo .logo-fallback { font-size: 20px; line-height: 1; }
+    .card.has-hero > .card-logo { display: none; }
+    .card.has-hero .card-headline { grid-row: 2; }
+    .card.has-hero .card-what     { grid-row: 3; }
+    .card.has-hero .card-why      { grid-row: 4; }
+    .card.has-hero .card-footer   { grid-row: 5; }
+    .card.has-hero.has-tag .gossip-tag, .card.has-hero.has-tag .date-tag { grid-row: 2; }
+    .card.has-hero.has-tag .card-headline { grid-row: 3; }
+    .card.has-hero.has-tag .card-what     { grid-row: 4; }
+    .card.has-hero.has-tag .card-why      { grid-row: 5; }
+    .card.has-hero.has-tag .card-footer   { grid-row: 6; }
+</style>
+</head>
+<body>
+<!-- PDF Button -->
+<button class="pdf-btn" onclick="window.print()">
+<span class="pdf-btn-icon">⬇</span> Save as PDF
+  </button>
+<div class="page">
+<!-- ── HEADER ── -->
+<header>
+<div class="header-bar"></div>
+<div class="live-badge">
+<span class="live-dot"></span>
+        Live Briefing · AI Influencers Forum
+      </div>
+<h1 class="header-title">AI Newsflash</h1>
+<p class="header-date">MARCH 25, 2026  ·  LAST 7 DAYS</p>
+<p class="header-sub">"The week AI went to court"</p>
+<!-- Profile / Byline -->
+<div class="byline">
+<div class="photo-orbit">
+<img alt="Dana Aronovich" class="byline-photo" src="../../Image (13).jpg"/>
+<div class="photo-ring"></div>
+<div class="orbit-spinner">
+<div class="orbit-ball"></div>
+</div>
+</div>
+<div class="byline-info">
+<span class="byline-label">Built by</span>
+<span class="byline-name">Dana Aronovich</span>
+</div>
+</div>
+<div class="header-divider"></div>
+</header>
+<!-- ══════════════════════════════════════════════════════
+         🧠 BIG MOVES
+    ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🧠</span>
+<span class="section-title blue">Big Moves</span>
+<span class="section-count">4 items</span>
+</div>
+<!-- 1 · Anthropic vs Pentagon — BREAKING -->
+<div class="card accent-spicy has-tag has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_01_Anthropic_vs__Pentagon__Federal_court_showdown.jpg"/><div class="card-hero-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com">
+<span class="logo-fallback" style="display:none">⚖️</span>
+</img></div></div>
+<div class="gossip-tag">🔴 Breaking · Today</div>
+<div class="card-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com"/>
+<span class="logo-fallback" style="display:none">⚖️</span>
+</div>
+<div class="card-headline">Anthropic vs. Pentagon: Federal court showdown — happening right now</div>
+<div class="card-what">Anthropic is in federal court in San Francisco today challenging the Pentagon's ban after Defense Secretary Hegseth declared it a "national security risk" for refusing to strip Claude's safety guardrails for lethal autonomous weapons. A court filing revealed the Pentagon privately said they were "nearly aligned" — one week before Trump declared the relationship over.</div>
+<div class="card-why why-spicy"><span class="why-label">Why it matters</span>This sets legal precedent for whether governments can compel AI companies to remove safety guardrails. The entire U.S. tech industry is watching.</div>
+<div class="card-footer">
+<a class="pill pill-spicy" href="https://www.aljazeera.com/economy/2026/3/24/anthropic-challenges-us-pentagons-ban-in-san-francisco-court-showdown" target="_blank">aljazeera.com</a>
+<a class="pill pill-spicy" href="https://techcrunch.com/2026/03/20/new-court-filing-reveals-pentagon-told-anthropic-the-two-sides-were-nearly-aligned-a-week-after-trump-declared-the-relationship-kaput/" target="_blank">techcrunch.com</a>
+</div>
+</div>
+<!-- 2 · OpenAI kills Sora — BREAKING -->
+<div class="card accent-spicy has-tag has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_02_OpenAI_kills_Sora___Disney_s__1B_deal_collapses.jpg"/><div class="card-hero-logo">
+<img alt="OpenAI" onerror="this.style.display='none'" src="https://logo.clearbit.com/openai.com">
+<img alt="Disney" onerror="this.style.display='none'" src="https://logo.clearbit.com/disney.com"/>
+</img></div></div>
+<div class="gossip-tag">🔴 Breaking · Yesterday</div>
+<div class="card-logo dual">
+<img alt="OpenAI" onerror="this.style.display='none'" src="https://logo.clearbit.com/openai.com"/>
+<img alt="Disney" onerror="this.style.display='none'" src="https://logo.clearbit.com/disney.com"/>
+</div>
+<div class="card-headline">OpenAI kills Sora — Disney's $1B deal collapses overnight</div>
+<div class="card-what">OpenAI shut down Sora effective immediately on March 24, citing deepfake safety concerns and resource reallocation to higher-priority products. The move blindsided Disney, who had a $1B, 3-year deal allowing video generation of 200+ Disney characters — Disney learned of the shutdown 30 minutes after an active working session ended. Disney has since exited the deal entirely.</div>
+<div class="card-why why-spicy"><span class="why-label">Why it matters</span>OpenAI killed its most viral consumer product at peak momentum. A $1B partnership collapsed overnight. This signals that safety pressure + compute economics can override even blockbuster revenue deals.</div>
+<div class="card-footer">
+<a class="pill pill-spicy" href="https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/" target="_blank">techcrunch.com</a>
+<a class="pill pill-spicy" href="https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/" target="_blank">variety.com</a>
+<a class="pill pill-spicy" href="https://www.npr.org/2026/03/25/g-s1-115055/openai-pulls-the-plug-on-sora-the-viral-ai-video-app-that-sparked-deepfake-concerns" target="_blank">npr.org</a>
+</div>
+</div>
+<!-- 3 · OpenAI $25B revenue + IPO -->
+<div class="card accent-blue has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_03_OpenAI_hits__25B_annualized_revenue___IPO_steps.jpg"/><div class="card-hero-logo">
+<img alt="OpenAI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/openai.com">
+<span class="logo-fallback" style="display:none">🤖</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="OpenAI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/openai.com"/>
+<span class="logo-fallback" style="display:none">🤖</span>
+</div>
+<div class="card-headline">OpenAI hits $25B annualized revenue — IPO steps begin</div>
+<div class="card-what">OpenAI crossed $25B in annualized revenue and is taking early steps toward a public listing, potentially as early as late 2026. Separately, the OpenAI Foundation announced $1B in grants for 2026 to reinforce its public-benefit mission amid commercialization scrutiny.</div>
+<div class="card-why why-blue"><span class="why-label">Why it matters</span>An OpenAI IPO would be the most consequential tech market event since Meta's 2012 listing.</div>
+<div class="card-footer">
+<a class="pill pill-blue" href="https://www.bloomberg.com/news/articles/2026-03-24/openai-nonprofit-names-leaders-aims-to-spend-1-billion-in-2026" target="_blank">bloomberg.com</a>
+</div>
+</div>
+<!-- 3 · xAI $20B Series E -->
+<div class="card accent-blue has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_04_xAI_closes__20B_Series_E___but_Grok_5_misses_Q1.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">𝕏</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">𝕏</span>
+</div>
+<div class="card-headline">xAI closes $20B Series E — but Grok 5 misses Q1 deadline</div>
+<div class="card-what">xAI upsized its Series E to $20B (from a $15B target), cementing its place alongside OpenAI and Anthropic at the frontier. But Grok 5 — committed to Q1 2026 — officially slipped to Q2, raising questions about execution at scale.</div>
+<div class="card-why why-blue"><span class="why-label">Why it matters</span>Money alone doesn't buy model timelines. A missed deadline for the flagship product is a credibility hit at the worst moment.</div>
+<div class="card-footer">
+<a class="pill pill-blue" href="https://www.nxcode.io/resources/news/grok-5-release-date-latest-news-2026" target="_blank">nxcode.io</a>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════════════════
+         🛠 NEW TOOLS & RELEASES
+    ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🛠</span>
+<span class="section-title green">New Tools &amp; Releases</span>
+<span class="section-count">3 items</span>
+</div>
+<!-- 4 · Google Gemini in Gmail -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_05_Gemini_goes_deep_into_Gmail___AI_Overviews__inbo.jpg"/><div class="card-hero-logo">
+<img alt="Google" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/google.com">
+<span class="logo-fallback" style="display:none">📧</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="Google" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/google.com"/>
+<span class="logo-fallback" style="display:none">📧</span>
+</div>
+<div class="card-headline">Gemini goes deep into Gmail — AI Overviews, inbox Q&amp;A, full Workspace rollout</div>
+<div class="card-what">Google launched major Gemini upgrades across Gmail, Docs, Sheets, Slides, and Drive: AI thread summaries, contextual inbox Q&amp;A, and new creation tools. Rolling out to Google AI Ultra and Pro subscribers now.</div>
+<div class="card-why why-green"><span class="why-label">Why it matters</span>Google is embedding AI into the world's most widely used productivity suite — this reaches a different scale than any standalone AI tool.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://blog.google/products-and-platforms/products/gmail/gmail-is-entering-the-gemini-era/" target="_blank">blog.google · Gmail</a>
+<a class="pill pill-green" href="https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026/" target="_blank">workspace</a>
+</div>
+</div>
+<!-- 5 · Meta acqui-hires Dreamer -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_06_Meta_acqui_hires_agentic_AI_startup_Dreamer_into.jpg"/><div class="card-hero-logo">
+<img alt="Meta" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/meta.com">
+<span class="logo-fallback" style="display:none">🤖</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="Meta" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/meta.com"/>
+<span class="logo-fallback" style="display:none">🤖</span>
+</div>
+<div class="card-headline">Meta acqui-hires agentic AI startup Dreamer into Superintelligence Labs</div>
+<div class="card-what">Meta absorbed the co-founders and key staff of Dreamer directly into its Superintelligence Labs group under Chief AI Officer Alexandr Wang. This follows Meta's March 10 acquisition of Moltbook — a social network built for AI agents.</div>
+<div class="card-why why-green"><span class="why-label">Why it matters</span>Meta is consolidating agentic AI talent at speed — signalling a strategic push toward autonomous systems, not just assistants.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://siliconangle.com/2026/03/23/meta-acqui-hires-co-founders-agentic-ai-startup-dreamer/" target="_blank">siliconangle.com</a>
+</div>
+</div>
+<!-- 6 · Meta AI content moderation -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_07_Meta_deploys_AI_content_moderation___replaces_th.jpg"/><div class="card-hero-logo">
+<img alt="Meta" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/meta.com">
+<span class="logo-fallback" style="display:none">🛡️</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="Meta" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/meta.com"/>
+<span class="logo-fallback" style="display:none">🛡️</span>
+</div>
+<div class="card-headline">Meta deploys AI content moderation — replaces third-party human review</div>
+<div class="card-what">Meta began replacing human review vendors with in-house AI systems. Early results: 2× detection of adult sexual solicitation vs. humans, 60%+ reduction in errors, handling ~5,000 scam attempts per day.</div>
+<div class="card-why why-green"><span class="why-label">Why it matters</span>The world's largest social platform just automated trust &amp; safety — a landmark shift with massive implications for content moderation labor globally.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://techcrunch.com/2026/03/19/meta-rolls-out-new-ai-content-enforcement-systems-while-reducing-reliance-on-third-party-vendors/" target="_blank">techcrunch.com</a>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════════════════
+         📈 TRENDS TO WATCH
+    ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="section-header">
+<span class="section-icon">📈</span>
+<span class="section-title blue">Trends to Watch</span>
+<span class="section-count">2 items</span>
+</div>
+<!-- 7 · Anthropic doubles revenue -->
+<div class="card accent-blue has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_08_Anthropic_doubles_revenue___steals_OpenAI_s_ente.jpg"/><div class="card-hero-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com">
+<span class="logo-fallback" style="display:none">📈</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com"/>
+<span class="logo-fallback" style="display:none">📈</span>
+</div>
+<div class="card-headline">Anthropic doubles revenue — steals OpenAI's enterprise market share</div>
+<div class="card-what">Anthropic's annualized revenue nearly doubled to $20B. The share of U.S. companies paying for its tools jumped from ~4% to 20% in one year. Meanwhile OpenAI's enterprise AI spending share fell from 50% to 27% — with Anthropic taking most of that ground.</div>
+<div class="card-why why-blue"><span class="why-label">Why it matters</span>This is the clearest signal yet that Anthropic is a genuine enterprise rival to OpenAI, not just a safety research shop.</div>
+<div class="card-footer">
+<a class="pill pill-blue" href="https://qz.com/anthropic-claude-ai-business-revenue-pentagon-openai-chatgpt" target="_blank">qz.com</a>
+</div>
+</div>
+<!-- 8 · McKinsey jobs report -->
+<div class="card accent-blue has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_09_McKinsey__AI_automated_12__of_job_tasks_in_2_yea.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">📊</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">📊</span>
+</div>
+<div class="card-headline">McKinsey: AI automated 12% of job tasks in 2 years — 8% of new jobs are AI-related</div>
+<div class="card-what">McKinsey's March 2026 report found AI has automated 12% of economy-wide job tasks in just two years. 8% of newly created job categories are directly AI-related — a partial but uneven offset. Anthropic published a parallel report on which jobs AI is actively performing vs. theoretically could.</div>
+<div class="card-why why-blue"><span class="why-label">Why it matters</span>The most rigorous economic data yet on AI's real labor market impact — the debate moves from speculation to measurable evidence.</div>
+<div class="card-footer">
+<a class="pill pill-blue" href="https://fortune.com/2026/03/06/ai-job-losses-report-anthropic-research-great-recession-for-white-collar-workers/" target="_blank">fortune.com</a>
+<a class="pill pill-blue" href="https://news.un.org/en/story/2026/03/1167075" target="_blank">un.org</a>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════════════════
+         🤝 DEALS & MONEY
+    ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🤝</span>
+<span class="section-title gold">Deals &amp; Money</span>
+<span class="section-count">2 items</span>
+</div>
+<!-- 9 · Robotics mega-rounds -->
+<div class="card accent-gold has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_10_Robotics_enters_the_mega_round_era____1_2B_raise.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">🦾</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">🦾</span>
+</div>
+<div class="card-headline">Robotics enters the mega-round era — $1.2B raised in one week</div>
+<div class="card-what">Four AI robotics companies raised $1.2B+ in a single week: Mind Robotics ($500M), Rhoda AI ($450M), Sunday ($165M, new unicorn), Oxa ($103M). All target industrial, household, or logistics automation.</div>
+<div class="card-why why-gold"><span class="why-label">Why it matters</span>LLM-era capital is now flowing into physical AI at scale — investors believe the robotics inflection point has arrived.</div>
+<div class="card-footer">
+<a class="pill pill-gold" href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-robotics-ecommerce-quince/" target="_blank">crunchbase.com</a>
+</div>
+</div>
+<!-- 10 · White House AI Policy -->
+<div class="card accent-gold has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_11_White_House_releases_National_AI_Policy_Framewor.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">🏛️</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">🏛️</span>
+</div>
+<div class="card-headline">White House releases National AI Policy Framework</div>
+<div class="card-what">The Trump administration released a federal AI governance framework proposing a unified U.S. standard across agencies. Explicitly deregulatory and pro-innovation — a direct counterpoint to the EU AI Act.</div>
+<div class="card-why why-gold"><span class="why-label">Why it matters</span>Sets the regulatory tone for U.S. AI governance through 2026 and beyond, affecting every major AI company operating domestically.</div>
+<div class="card-footer">
+<a class="pill pill-gold" href="https://www.dlapiper.com/en-us/insights/publications/2026/03/white-house-releases-the-national-policy-framework-for-ai-key-points" target="_blank">dlapiper.com</a>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════════════════
+         🌶️ INDUSTRY GOSSIP
+    ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🌶️</span>
+<span class="section-title spicy">Industry Gossip</span>
+<span class="section-count">1 item</span>
+</div>
+<!-- 11 · Grok CSAM lawsuit -->
+<div class="card accent-spicy has-tag">
+<div class="gossip-tag">⚠ Serious &amp; credible</div>
+<div class="card-logo">
+<span class="logo-fallback">⚖️</span>
+</div>
+<div class="card-headline">Grok faces class-action lawsuit over AI-generated CSAM deepfakes</div>
+<div class="card-what">Three girls filed a class-action against xAI alleging Grok was used to generate child sexual abuse material from their real photos. One of the most serious legal challenges any AI image generation system has ever faced.</div>
+<div class="card-why why-spicy"><span class="why-label">Why it matters</span>Could trigger sweeping regulatory action on AI image generation and expose companies to major liability for user-generated misuse. Watch for legislation to follow.</div>
+<div class="card-footer">
+<a class="pill pill-spicy" href="https://19thnews.org/2026/03/women-girls-lawsuit-grok-ai-deepfakes/" target="_blank">19thnews.org</a>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════════════════
+         ⚡ TL;DR
+    ═══════════════════════════════════════════════════════ -->
+<div class="tldr">
+<div class="tldr-title">⚡ TL;DR — 3 things to remember</div>
+<ul class="tldr-list">
+<li>Anthropic is in federal court TODAY fighting the Pentagon's ban — the most consequential AI civil liberties case in history. The outcome will define whether governments can override AI safety decisions.</li>
+<li>Anthropic doubled revenue while OpenAI's enterprise share fell from 50% → 27% — the competitive map is being redrawn faster than most expected.</li>
+<li>xAI raised $20B but missed its Grok 5 deadline. Meanwhile Grok faces a CSAM lawsuit. The contrast with Anthropic's court stand on safety guardrails couldn't be sharper.</li>
+</ul>
+</div>
+<!-- ── FOOTER ── -->
+<footer>
+      Generated <span>March 25, 2026</span>  ·  AI Influencers Forum  ·  Powered by <span>Claude Sonnet 4.6</span>
+</footer>
+</div><!-- /page -->
+</body>
+</html>
