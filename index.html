@@ -2,10 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=runs/2026-03-30/ai-newsflash-march-30-2026_with_images.html" />
-  <title>AI Newsflash — Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 AI Newsflash — Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:   #00D4FF;
+      --pink:   #FF006E;
+      --green:  #00FF9D;
+      --yellow: #FFD60A;
+      --bg:     #0A0A0F;
+      --surface: rgba(10,10,22,0.82);
+      --border: rgba(255,255,255,0.08);
+      --text:   #E8E8F0;
+      --muted:  #6B6B80;
+    }
+
+    body {
+      background: var(--bg) url("AI Influencers Background.png") center top / cover fixed;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: rgba(8,8,14,0.88);
+      pointer-events: none; z-index: 0;
+    }
+
+    .page {
+      position: relative; z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+    .header-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--pink), var(--blue), var(--green), transparent);
+      background-size: 200% 100%;
+      animation: slide-bar 4s linear infinite;
+      z-index: 10;
+    }
+    @keyframes slide-bar { 0%{background-position:0%} 100%{background-position:200%} }
+
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,0,110,0.12);
+      border: 1px solid rgba(255,0,110,0.35);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.12em; color: var(--pink);
+      text-transform: uppercase; margin-bottom: 22px;
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--pink);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(42px, 8vw, 78px);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+      background: linear-gradient(135deg, #fff 0%, var(--blue) 45%, var(--pink) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .tagline {
+      margin-top: 14px; font-size: 16px; font-weight: 300;
+      color: rgba(232,232,240,0.5); letter-spacing: 0.02em;
+    }
+
+    /* ── BYLINE ── */
+    .byline {
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-top: 28px;
+      padding: 8px 18px 8px 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 999px;
+    }
+    .photo-orbit { position: relative; width: 52px; height: 52px; flex-shrink: 0; }
+    .byline-photo {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 40px; height: 40px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+    }
+    .photo-ring {
+      position: absolute; inset: 0; border-radius: 50%;
+      border: 1.5px solid rgba(0,212,255,0.55);
+      box-shadow: 0 0 8px rgba(0,212,255,0.35), 0 0 20px rgba(0,212,255,0.1);
+    }
+    .orbit-spinner { position: absolute; inset: 0; border-radius: 50%; animation: spin 2.8s linear infinite; }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .orbit-ball {
+      position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
+      width: 8px; height: 8px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff, var(--blue));
+      box-shadow: 0 0 6px var(--blue), 0 0 14px rgba(0,212,255,0.8);
+    }
+    .byline-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 8px;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+      display: block; margin-bottom: 3px;
+    }
+    .byline-name {
+      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
+      background: linear-gradient(90deg, #fff, var(--blue));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 40px auto 0;
+    }
+
+    /* ── ARCHIVE LIST ── */
+    .archive-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 20px; margin-top: 48px;
+    }
+
+    .edition {
+      display: flex; align-items: center; gap: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+      backdrop-filter: blur(16px);
+    }
+    .edition:hover {
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(10,10,22,0.95);
+      transform: translateY(-2px);
+    }
+    .edition.latest { border-left: 3px solid var(--blue); }
+    .edition.past   { border-left: 3px solid var(--muted); }
+
+    .edition-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.08em; color: var(--muted);
+      white-space: nowrap; min-width: 100px;
+    }
+    .edition-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px; font-weight: 700; color: #fff; flex: 1;
+    }
+    .edition-theme {
+      font-size: 12.5px; color: rgba(232,232,240,0.5);
+      font-weight: 300; margin-top: 3px;
+    }
+    .edition-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+    }
+    .badge-latest {
+      background: rgba(0,212,255,0.12); border: 1px solid rgba(0,212,255,0.3); color: var(--blue);
+    }
+    .badge-past {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; margin-top: 60px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+    }
+    footer span { color: var(--pink); }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page > * { animation: fade-up 0.6s ease both; }
+  </style>
 </head>
 <body>
-  <p>Redirecting to latest edition... <a href="runs/2026-03-30/ai-newsflash-march-30-2026_with_images.html">click here if not redirected</a></p>
+  <div class="header-bar"></div>
+
+  <div class="page">
+    <header>
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        Weekly · AI Influencers Forum
+      </div>
+      <h1>AI Newsflash</h1>
+      <p class="tagline">The week in AI — curated, visualized, delivered</p>
+
+      <div class="byline">
+        <div class="photo-orbit">
+          <img src="Image (13).jpg" alt="Dana Aronovich" class="byline-photo" />
+          <div class="photo-ring"></div>
+          <div class="orbit-spinner"><div class="orbit-ball"></div></div>
+        </div>
+        <div>
+          <span class="byline-label">Curated by</span>
+          <span class="byline-name">Dana Aronovich</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <p class="archive-label">📅 All Editions</p>
+
+    <!-- ── LATEST ── -->
+    <a class="edition latest" href="runs/2026-03-30/ai-newsflash-march-30-2026_with_images.html">
+      <div class="edition-date">Mar 30, 2026</div>
+      <div>
+        <div class="edition-title">The week AI took control</div>
+        <div class="edition-theme">Claude Computer Use · Sora shutdown · Gemini 3.1 · Shopify agents · $1.03B LeCun round</div>
+      </div>
+      <span class="edition-badge badge-latest">Latest</span>
+    </a>
+
+    <!-- ── PAST EDITIONS ── -->
+    <a class="edition past" href="runs/2026-03-25/ai-newsflash-march-25-2026.html">
+      <div class="edition-date">Mar 25, 2026</div>
+      <div>
+        <div class="edition-title">The week AI went to court</div>
+        <div class="edition-theme">Anthropic vs Pentagon · OpenAI $25B ARR · xAI $20B Series E · Gemini in Gmail</div>
+      </div>
+      <span class="edition-badge badge-past">Archive</span>
+    </a>
+
+    <footer>
+      Powered by <span>Claude Sonnet 4.6</span> &nbsp;·&nbsp; AI Influencers Forum &nbsp;·&nbsp; <span>Dana Aronovich</span>
+    </footer>
+  </div>
 </body>
 </html>
