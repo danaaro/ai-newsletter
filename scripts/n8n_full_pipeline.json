@@ -1,0 +1,104 @@
+{
+  "name": "AI Newsflash — Full Run & Send",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "run-newsletter",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node-001",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "notes": "POST body: { \"input_path\": \"runs/2026-03-30/ai-newsflash-march-30-2026.html\", \"gemini_key\": \"YOUR_KEY\" }"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Build all paths needed for the pipeline\nconst inputPath  = $input.item.json.body.input_path;\nconst geminiKey  = $input.item.json.body.gemini_key;\nconst workDir    = 'C:\\\\Users\\\\danaa\\\\OneDrive - AMDOCS\\\\Backup Folders\\\\Documents\\\\CC Projects\\\\AI newsletter';\nconst outputPath = inputPath.replace('.html', '_with_images.html');\nreturn [{\n  json: {\n    input_path:  inputPath,\n    output_path: outputPath,\n    gemini_key:  geminiKey,\n    work_dir:    workDir\n  }\n}];"
+      },
+      "id": "node-002",
+      "name": "Build Paths",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "command": "=cd \"{{ $json.work_dir }}\" && set GEMINI_API_KEY={{ $json.gemini_key }} && py -3 scripts/add_hero_images.py --input {{ $json.input_path }}"
+      },
+      "id": "node-003",
+      "name": "Generate Hero Images",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [680, 300],
+      "notes": "Runs add_hero_images.py — outputs _with_images.html in the same run folder"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Read the generated HTML file from disk\nconst fs      = require('fs');\nconst path    = require('path');\nconst workDir = $('Build Paths').item.json.work_dir;\nconst outPath = $('Build Paths').item.json.output_path;\nconst full    = path.join(workDir, outPath);\nif (!fs.existsSync(full)) {\n  throw new Error('Output file not found: ' + full + '\\nScript stdout: ' + $input.item.json.stdout);\n}\nconst html = fs.readFileSync(full, 'utf8');\nreturn [{ json: { html_content: html, file_path: full } }];"
+      },
+      "id": "node-004",
+      "name": "Read Output HTML",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "dana.aronovich@gmail.com",
+        "subject": "=🔥 AI Newsflash — {{ $now.format('MMMM d, yyyy') }}",
+        "emailType": "html",
+        "message": "={{ $json.html_content }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "node-005",
+      "name": "Send via Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_YOUR_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"done\", \"sent_to\": \"dana.aronovich@gmail.com\", \"newsletter\": \"{{ $('Build Paths').item.json.output_path }}\", \"timestamp\": \"{{ $now.toISO() }}\" }"
+      },
+      "id": "node-006",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1340, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Build Paths", "type": "main", "index": 0 }]]
+    },
+    "Build Paths": {
+      "main": [[{ "node": "Generate Hero Images", "type": "main", "index": 0 }]]
+    },
+    "Generate Hero Images": {
+      "main": [[{ "node": "Read Output HTML", "type": "main", "index": 0 }]]
+    },
+    "Read Output HTML": {
+      "main": [[{ "node": "Send via Gmail", "type": "main", "index": 0 }]]
+    },
+    "Send via Gmail": {
+      "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

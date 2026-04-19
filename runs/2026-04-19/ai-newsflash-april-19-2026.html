@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🔥 AI Newsflash — April 19, 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:    #00D4FF;
+      --pink:    #FF006E;
+      --green:   #00FF9D;
+      --yellow:  #FFD60A;
+      --bg:      #0A0A0F;
+      --surface: rgba(10, 10, 22, 0.82);
+      --border:  rgba(255,255,255,0.08);
+      --text:    #E8E8F0;
+      --muted:   #6B6B80;
+      --radius:  14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg) url("../../AI Influencers Background.png") center top / cover fixed;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 14, 0.85);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    header {
+      position: relative;
+      padding: 56px 0 16px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .header-bar {
+      position: absolute;
+      top: 0; left: -24px; right: -24px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--pink), var(--blue), var(--green), transparent);
+      background-size: 200% 100%;
+      animation: slide-bar 4s linear infinite;
+    }
+    @keyframes slide-bar { 0%{background-position:0% 0} 100%{background-position:200% 0} }
+
+    .byline {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 8px 18px 8px 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 999px;
+      animation: fade-up 0.5s ease both;
+    }
+    .photo-orbit {
+      position: relative;
+      width: 64px; height: 64px;
+      flex-shrink: 0;
+    }
+    .byline-photo {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 0 14px rgba(0,212,255,0.2);
+    }
+    .photo-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0,212,255,0.55);
+      box-shadow: 0 0 8px rgba(0,212,255,0.35), 0 0 20px rgba(0,212,255,0.15), inset 0 0 8px rgba(0,212,255,0.08);
+    }
+    .orbit-spinner {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      animation: orbit-spin 2.8s linear infinite;
+    }
+    .orbit-ball {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff, var(--blue));
+      box-shadow: 0 0 6px var(--blue), 0 0 14px rgba(0,212,255,0.8), 0 0 24px rgba(0,212,255,0.4);
+    }
+    @keyframes orbit-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .byline-info { text-align: left; }
+    .byline-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .byline-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff, var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,0,110,0.12);
+      border: 1px solid rgba(255,0,110,0.35);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--pink);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      animation: fade-up 0.6s 0.05s ease both;
+    }
+    .live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--pink);
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100%{opacity:1;transform:scale(1)}
+      50%{opacity:0.3;transform:scale(0.7)}
+    }
+
+    .header-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(38px, 7vw, 72px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      background: linear-gradient(135deg, #fff 0%, var(--blue) 45%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fade-up 0.7s 0.1s ease both;
+    }
+    .header-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+      animation: fade-up 0.7s 0.2s ease both;
+    }
+    .header-sub {
+      margin-top: 14px;
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(232,232,240,0.55);
+      letter-spacing: 0.02em;
+      animation: fade-up 0.7s 0.3s ease both;
+    }
+    .header-divider {
+      width: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 16px auto 0;
+      animation: fade-up 0.7s 0.4s ease both;
+    }
+
+    section {
+      margin-top: 32px;
+      animation: fade-up 0.7s ease both;
+    }
+    section:nth-child(1) { animation-delay: 0.3s }
+    section:nth-child(2) { animation-delay: 0.4s }
+    section:nth-child(3) { animation-delay: 0.5s }
+    section:nth-child(4) { animation-delay: 0.6s }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-icon { font-size: 22px; line-height: 1; }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .section-title.blue  { background: linear-gradient(90deg, #fff, var(--blue));  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.green { background: linear-gradient(90deg, #fff, var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.gold  { background: linear-gradient(90deg, #fff, var(--yellow));-webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-title.spicy { background: linear-gradient(90deg, var(--pink), var(--yellow)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-count {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 20px 18px 22px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: border-color 0.25s, transform 0.25s, background 0.25s;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 56px;
+      grid-template-rows: auto auto auto auto;
+      column-gap: 16px;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .card:hover {
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(10, 10, 22, 0.92);
+      transform: translateY(-2px);
+    }
+    .card.accent-blue  { border-left: 3px solid var(--blue);  }
+    .card.accent-green { border-left: 3px solid var(--green); }
+    .card.accent-gold  { border-left: 3px solid var(--yellow);}
+    .card.accent-spicy { border-left: 3px solid var(--pink);  }
+
+    .card-headline { grid-column: 1; grid-row: 1; }
+    .card-what     { grid-column: 1; grid-row: 2; }
+    .card-why      { grid-column: 1; grid-row: 3; }
+    .card-footer   { grid-column: 1; grid-row: 4; }
+    .card-logo     { grid-column: 2; grid-row: 1 / 3; align-self: start; justify-self: center; }
+
+    .card-logo {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .card-logo img { width: 36px; height: 36px; object-fit: contain; border-radius: 4px; }
+    .card-logo .logo-fallback { font-size: 22px; line-height: 1; }
+    .card-logo.dual { flex-direction: column; gap: 3px; padding: 4px; }
+    .card-logo.dual img { width: 22px; height: 22px; }
+
+    .card-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 9px;
+    }
+    .card-what {
+      font-size: 13.5px;
+      color: rgba(232,232,240,0.72);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .card-why {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 11px;
+      border-radius: 8px;
+      margin-bottom: 11px;
+      line-height: 1.5;
+    }
+    .why-blue  { background: rgba(0,212,255,0.07);  border-left: 2px solid rgba(0,212,255,0.5);  color: #7DE8FF; }
+    .why-green { background: rgba(0,255,157,0.07);  border-left: 2px solid rgba(0,255,157,0.5);  color: #7DFFCC; }
+    .why-gold  { background: rgba(255,214,10,0.07); border-left: 2px solid rgba(255,214,10,0.5); color: #FFE566; }
+    .why-spicy { background: rgba(255,0,110,0.07);  border-left: 2px solid rgba(255,214,10,0.5); color: #FF9E4A; }
+
+    .why-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-right: 6px;
+    }
+
+    .card-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .pill:hover { opacity: 0.75; transform: scale(0.97); }
+    .pill-blue  { background: rgba(0,212,255,0.10);  border: 1px solid rgba(0,212,255,0.25);  color: var(--blue);  }
+    .pill-green { background: rgba(0,255,157,0.10);  border: 1px solid rgba(0,255,157,0.25);  color: var(--green); }
+    .pill-gold  { background: rgba(255,214,10,0.10); border: 1px solid rgba(255,214,10,0.25); color: var(--yellow);}
+    .pill-spicy { background: rgba(255,100,0,0.10);  border: 1px solid rgba(255,100,0,0.25);  color: #FF9E4A; }
+    .pill::before { content: '↗'; font-size: 9px; }
+
+    .gossip-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--pink), var(--yellow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border: 1px solid rgba(255,0,110,0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .card.has-tag .card-headline { grid-row: 2; }
+    .card.has-tag .card-what     { grid-row: 3; }
+    .card.has-tag .card-why      { grid-row: 4; }
+    .card.has-tag .card-footer   { grid-row: 5; }
+    .card.has-tag .card-logo     { grid-row: 1 / 4; }
+
+    .tldr {
+      margin-top: 52px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(255,0,110,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 32px 36px;
+      position: relative;
+      overflow: hidden;
+      animation: fade-up 0.7s 0.9s ease both;
+    }
+    .tldr::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.03), transparent 50%, rgba(255,0,110,0.03));
+      border-radius: 18px;
+    }
+    .tldr-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+    .tldr-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .tldr-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: rgba(232,232,240,0.85);
+    }
+    .tldr-list li::before {
+      content: '→';
+      color: var(--blue);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      animation: fade-up 0.7s 1s ease both;
+    }
+    footer span { color: var(--pink); }
+
+    .pdf-btn {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(255,0,110,0.15));
+      border: 1px solid rgba(0,212,255,0.35);
+      border-radius: 999px;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.25s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 20px rgba(0,212,255,0.1);
+      animation: fade-up 0.7s 1.1s ease both;
+    }
+    .pdf-btn:hover {
+      background: linear-gradient(135deg, rgba(0,212,255,0.25), rgba(255,0,110,0.25));
+      border-color: rgba(0,212,255,0.6);
+      transform: translateY(-2px);
+    }
+    .pdf-btn:active { transform: scale(0.97); }
+    .pdf-btn-icon { font-size: 14px; }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+    ::selection { background: rgba(0,212,255,0.25); color: #fff; }
+
+    @media print {
+      @page { margin: 15mm 12mm; size: A4; }
+      body { background: #0A0A0F !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; color-adjust: exact; font-size: 13px; }
+      body::before { display: none; }
+      .pdf-btn { display: none !important; }
+      .page { padding: 0 8px 20px; max-width: 100%; }
+      header { padding: 20px 0 24px; }
+      .header-bar { animation: none; }
+      .live-dot { animation: none; }
+      section { margin-top: 28px; }
+      .card { break-inside: avoid; margin-bottom: 8px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+      .tldr { break-inside: avoid; }
+    }
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()">
+  <span class="pdf-btn-icon">⬇</span> Save as PDF
+</button>
+
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="header-bar"></div>
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      Live Briefing · AI Influencers Forum
+    </div>
+    <h1 class="header-title">AI Newsflash</h1>
+    <p class="header-date">APRIL 19, 2026  ·  LAST 7 DAYS</p>
+    <p class="header-sub">"The week models went to war — and workers went home"</p>
+    <div class="byline">
+      <div class="photo-orbit">
+        <img alt="Dana Aronovich" class="byline-photo" src="../../Image (13).jpg"/>
+        <div class="photo-ring"></div>
+        <div class="orbit-spinner">
+          <div class="orbit-ball"></div>
+        </div>
+      </div>
+      <div class="byline-info">
+        <span class="byline-label">Built by</span>
+        <span class="byline-name">Dana Aronovich</span>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       🧠 BIG MOVES
+  ═══════════════════════════════════════════════════════ -->
+  <section>
+    <div class="section-header">
+      <span class="section-icon">🧠</span>
+      <span class="section-title blue">Big Moves</span>
+      <span class="section-count">3 items</span>
+    </div>
+
+    <!-- 1 · Claude Opus 4.7 -->
+    <div class="card accent-spicy has-tag">
+      <div class="gossip-tag">🔴 Breaking · Thursday</div>
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/anthropic.com" alt="Anthropic"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">🤖</span>
+      </div>
+      <div class="card-headline">Claude Opus 4.7 ships — sharper code, 4K vision, and Claude Code goes xhigh by default</div>
+      <div class="card-what">Anthropic released Claude Opus 4.7 on April 16 across the API, claude.ai, and GitHub Copilot. The model brings meaningful upgrades: higher-resolution vision accepting images up to 2,576px on the long edge (~3.75 megapixels), improved performance on complex, long-running coding and software engineering tasks, and enhanced tool use across agentic workflows. Pricing remains unchanged at $5/$25 per million input/output tokens. Claude Code now defaults to "xhigh" compute mode on all plans — enabling more autonomous multi-step coding without manual escalation.</div>
+      <div class="card-why why-spicy"><span class="why-label">Why it matters</span>Opus 4.7 lands while GPT-6 stumbles — Anthropic's release cadence is accelerating while OpenAI's flagship stalls. The xhigh-by-default change in Claude Code is a direct power move: it silently raises the ceiling on what AI can do autonomously without the user asking for it.</div>
+      <div class="card-footer">
+        <a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" class="pill pill-spicy">anthropic.com</a>
+        <a href="https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/" target="_blank" class="pill pill-spicy">github.com</a>
+        <a href="https://findskill.ai/blog/claude-opus-4-7-release-tracker/" target="_blank" class="pill pill-spicy">findskill.ai</a>
+      </div>
+    </div>
+
+    <!-- 2 · GPT-6 -->
+    <div class="card accent-spicy has-tag">
+      <div class="gossip-tag">🔴 Breaking · Monday</div>
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/openai.com" alt="OpenAI"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">🤖</span>
+      </div>
+      <div class="card-headline">GPT-6 launches with 40%+ capability jump — and OpenAI holds prices flat</div>
+      <div class="card-what">OpenAI released GPT-6 on April 14 with what the company calls a 40%+ capability improvement over GPT-5.4 across reasoning, coding, and multimodal tasks. The model includes a new life sciences series optimized for protein engineering, genomics, and chemistry workflows — outperforming GPT-5.4 on 6 of 11 tasks on the LABBench2 benchmark. Notably, OpenAI held pricing flat despite the capability jump, a deliberate competitive signal. GPT-5.4's "Cyber" variant, released the same week, adds autonomous desktop-agent capabilities with 75% accuracy on the OSWorld-Verified task benchmark.</div>
+      <div class="card-why why-spicy"><span class="why-label">Why it matters</span>A 40% capability jump at the same price is a market pressure tactic — designed to force Anthropic and Google to match without monetizing the upgrade. The Cyber desktop agent variant, scoring 75% on OSWorld, confirms OpenAI is now directly competing on the agent desktop layer where Claude Computer Use was playing alone.</div>
+      <div class="card-footer">
+        <a href="https://llm-stats.com/ai-news" target="_blank" class="pill pill-spicy">llm-stats.com</a>
+        <a href="https://blog.greeden.me/en/2026/04/16/week-2-of-april-2026-one-week-generative-ai-news-roundup-what-gpt-5-4-cyber-claude-cyber-concerns-and-gemini-notebooks-show-about-what-comes-next-for-practical-ai/" target="_blank" class="pill pill-spicy">blog.greeden.me</a>
+      </div>
+    </div>
+
+    <!-- 3 · Claude Mythos Preview -->
+    <div class="card accent-blue">
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/anthropic.com" alt="Anthropic"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">🔒</span>
+      </div>
+      <div class="card-headline">Anthropic previews Claude Mythos to 50 secret partners — cybersecurity's next frontier model</div>
+      <div class="card-what">Anthropic quietly made "Claude Mythos" available to approximately 50 partner organizations on April 7 via a program called Project Glasswing. The model is described internally as a "step change" above Claude Opus 4.6, with a focus on cybersecurity vulnerability detection, advanced reasoning, and coding. The preview is invitation-only with no public announcement or benchmark disclosures. Partners include security research firms and enterprise infrastructure companies. A public release timeline has not been set.</div>
+      <div class="card-why why-blue"><span class="why-label">Why it matters</span>A secret model rollout to 50 partners is unusual — it signals Anthropic is using real-world cybersecurity applications as a live evaluation bed before the public launch. If the capability claims hold, Mythos could leapfrog both GPT-6 and Gemini on the tasks enterprises care most about.</div>
+      <div class="card-footer">
+        <a href="https://help.apiyi.com/en/claude-opus-4-7-vertex-ai-leak-release-analysis-en.html" target="_blank" class="pill pill-blue">apiyi.com</a>
+        <a href="https://www.geeky-gadgets.com/claude-opus-4-7-leak-anthropic-updates/" target="_blank" class="pill pill-blue">geeky-gadgets.com</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       🛠 NEW TOOLS & RELEASES
+  ═══════════════════════════════════════════════════════ -->
+  <section>
+    <div class="section-header">
+      <span class="section-icon">🛠</span>
+      <span class="section-title green">New Tools &amp; Releases</span>
+      <span class="section-count">3 items</span>
+    </div>
+
+    <!-- 4 · NVIDIA Ising -->
+    <div class="card accent-green">
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/nvidia.com" alt="NVIDIA"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">⚛️</span>
+      </div>
+      <div class="card-headline">NVIDIA launches Ising — the world's first open AI models for quantum computing</div>
+      <div class="card-what">NVIDIA released Ising, a family of open-source AI models purpose-built to accelerate quantum computing. The family includes two components: Ising Calibration (a 35-billion-parameter vision-language model that analyzes quantum processor experiment output and automates calibration with minimal human oversight) and Ising Decoding (two models tuned for speed and accuracy in real-time quantum error correction). Ising Decoding is 2.5× faster and 3× more accurate than traditional approaches. The models integrate with CUDA-Q, NVIDIA's hybrid quantum-classical computing platform. Early adopters include Harvard, Fermilab, and Lawrence Berkeley National Laboratory.</div>
+      <div class="card-why why-green"><span class="why-label">Why it matters</span>Quantum computing's biggest bottleneck isn't the qubits — it's the software layer that calibrates and corrects them. NVIDIA just open-sourced that layer. A 35B parameter model doing real-time error correction could compress years off the path to fault-tolerant quantum computers.</div>
+      <div class="card-footer">
+        <a href="https://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers" target="_blank" class="pill pill-green">nvidianews.nvidia.com</a>
+        <a href="https://developer.nvidia.com/ising" target="_blank" class="pill pill-green">developer.nvidia.com</a>
+      </div>
+    </div>
+
+    <!-- 5 · Google Gemma 4 -->
+    <div class="card accent-green">
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/google.com" alt="Google"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">🔍</span>
+      </div>
+      <div class="card-headline">Google ships Gemma 4 in four open variants — all Apache 2.0, free for commercial use</div>
+      <div class="card-what">Google released four new variants of its open-weight Gemma 4 model under Apache 2.0, making them fully free for commercial use without restrictions. The variants span the efficiency-capability spectrum, targeting on-device, edge, and research workloads. The release coincides with a broad push from Chinese labs releasing massive open-weight models that now rival the best proprietary models — a dynamic that is dramatically compressing the value of closed-source frontier models for standard tasks. Full benchmark details were published alongside the release on Google's AI developer hub.</div>
+      <div class="card-why why-green"><span class="why-label">Why it matters</span>Four Apache-licensed models in one drop is Google applying maximum pressure on the open-source segment. As Chinese labs and Google race each other to give away capable models, the moat of proprietary closed models like GPT-6 gets narrower — and the strategic value shifts to deployment, trust, and enterprise agreements.</div>
+      <div class="card-footer">
+        <a href="https://blog.greeden.me/en/2026/04/16/week-2-of-april-2026-one-week-generative-ai-news-roundup-what-gpt-5-4-cyber-claude-cyber-concerns-and-gemini-notebooks-show-about-what-comes-next-for-practical-ai/" target="_blank" class="pill pill-green">blog.greeden.me</a>
+        <a href="https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/" target="_blank" class="pill pill-green">humai.blog</a>
+      </div>
+    </div>
+
+    <!-- 6 · Stanford AI Index 2026 -->
+    <div class="card accent-green">
+      <div class="card-logo">
+        <span class="logo-fallback">📊</span>
+      </div>
+      <div class="card-headline">Stanford AI Index 2026: AI is faster, cheaper, everywhere — and still not understood</div>
+      <div class="card-what">Stanford's annual AI Index report for 2026 dropped this week, documenting the state of AI across capability benchmarks, economic impact, research output, and governance. Key findings: AI model performance costs have dropped by over 99% in two years for equivalent capability; the U.S. and China together produce over 70% of the world's foundation models; AI is now involved in over half of new drug discovery pipelines; and global AI investment hit $338 billion in 2025, a new record. The report also highlights a growing interpretability gap — models are improving faster than our ability to explain how they work.</div>
+      <div class="card-why why-green"><span class="why-label">Why it matters</span>The 99% cost drop in two years is the stat that reframes everything. At current rates, AI capabilities that cost enterprise budgets to deploy in 2024 will be effectively free by 2027. That's not a trend — it's a structural transformation of every industry that uses information.</div>
+      <div class="card-footer">
+        <a href="https://spectrum.ieee.org/state-of-ai-index-2026" target="_blank" class="pill pill-green">spectrum.ieee.org</a>
+        <a href="https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/" target="_blank" class="pill pill-green">technologyreview.com</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       💰 DEALS & MONEY
+  ═══════════════════════════════════════════════════════ -->
+  <section>
+    <div class="section-header">
+      <span class="section-icon">💰</span>
+      <span class="section-title gold">Deals &amp; Money</span>
+      <span class="section-count">3 items</span>
+    </div>
+
+    <!-- 7 · OpenAI acquires TBPN -->
+    <div class="card accent-gold">
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/openai.com" alt="OpenAI"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">📺</span>
+      </div>
+      <div class="card-headline">OpenAI buys TBPN — AI's first media empire play, $30M/year Silicon Valley talk show</div>
+      <div class="card-what">OpenAI acquired TBPN (Technology Business Programming Network) on April 2 — the company's first-ever media acquisition. TBPN is a daily live tech talk show hosted by founders John Coogan and Jordi Hays that airs on YouTube and X for three hours each day, covering AI, tech, defense, and business. The show brings in over $30 million annually according to The Wall Street Journal. The deal is described in the "low hundreds of millions." TBPN will continue as its own brand, reporting to OpenAI's chief political operative Chris Lehane. The show will not be paywalled.</div>
+      <div class="card-why why-gold"><span class="why-label">Why it matters</span>This is OpenAI buying narrative infrastructure. A daily show reaching millions of tech founders, operators, and investors, now owned by the company it covers most, creates a structural conflict — and a powerful megaphone. The move signals OpenAI sees the media layer as a competitive moat, not just a PR channel.</div>
+      <div class="card-footer">
+        <a href="https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" target="_blank" class="pill pill-gold">techcrunch.com</a>
+        <a href="https://www.cnbc.com/2026/04/02/openai-acquires-tech-podcast-tbpn.html" target="_blank" class="pill pill-gold">cnbc.com</a>
+        <a href="https://www.axios.com/2026/04/02/openai-acquires-tbpn" target="_blank" class="pill pill-gold">axios.com</a>
+      </div>
+    </div>
+
+    <!-- 8 · Snap 16% layoffs -->
+    <div class="card accent-gold">
+      <div class="card-logo">
+        <img src="https://logo.clearbit.com/snap.com" alt="Snap"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback" style="display:none">👻</span>
+      </div>
+      <div class="card-headline">Snap cuts 1,000 jobs — AI writes 65%+ of its code, CEO says the math no longer works</div>
+      <div class="card-what">Snap CEO Evan Spiegel announced on April 15 the company will lay off approximately 1,000 employees — 16% of its global workforce. In the memo to staff, Spiegel cited rapid advances in AI as the primary driver, noting that AI now generates more than 65% of Snap's new code. The restructuring is expected to reduce Snap's annualized cost base by over $500 million by the second half of 2026. Snap's stock jumped sharply on the announcement. More than 300 open roles were simultaneously closed.</div>
+      <div class="card-why why-gold"><span class="why-label">Why it matters</span>When a major consumer tech company publicly attributes 16% headcount reduction directly to AI-written code, it sets a precedent. This is the first major tech layoff explicitly framed as an AI productivity dividend — expect more companies to follow with similar math. AI isn't just changing how work is done; it's changing how many people are needed to do it.</div>
+      <div class="card-footer">
+        <a href="https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/" target="_blank" class="pill pill-gold">techcrunch.com</a>
+        <a href="https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html" target="_blank" class="pill pill-gold">cnbc.com</a>
+      </div>
+    </div>
+
+    <!-- 9 · OpenAI $25B ARR / Anthropic $19B -->
+    <div class="card accent-gold">
+      <div class="card-logo dual">
+        <img src="https://logo.clearbit.com/openai.com" alt="OpenAI"
+             onerror="this.style.display='none'">
+        <img src="https://logo.clearbit.com/anthropic.com" alt="Anthropic"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="card-headline">OpenAI hits $25B ARR — Anthropic closes in at $19B — IPO race is on</div>
+      <div class="card-what">OpenAI confirmed it has surpassed $25 billion in annualized recurring revenue and is taking early steps toward a public listing as early as late 2026. Anthropic is tracking at approximately $19 billion ARR, having accelerated sharply since the Claude 4.x release cycle began. The gap between the two has narrowed from roughly 3× to 1.3× in 18 months. Both companies are competing aggressively on enterprise contracts, developer tooling, and model capability to establish the valuation anchors needed before public markets evaluate the sector.</div>
+      <div class="card-why why-gold"><span class="why-label">Why it matters</span>When OpenAI IPOs, it will set the public-market price-to-ARR multiple that defines how AI companies are valued for years. Anthropic at $19B ARR — still private — will be benchmarked against that number. The race to grow ARR before the listing isn't just about revenue; it's about who controls the narrative of what AI is worth.</div>
+      <div class="card-footer">
+        <a href="https://radicaldatascience.wordpress.com/2026/04/17/ai-news-briefs-bulletin-board-for-april-2026/" target="_blank" class="pill pill-gold">radicaldatascience.wordpress.com</a>
+        <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank" class="pill pill-gold">crescendo.ai</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       ⚡ TL;DR
+  ═══════════════════════════════════════════════════════ -->
+  <div class="tldr">
+    <div class="tldr-title">⚡ TL;DR — 3 things to remember</div>
+    <ul class="tldr-list">
+      <li>Claude Opus 4.7 shipped Thursday while GPT-6 launched Monday — for the first time, both frontier labs dropped major models in the same week. Anthropic's xhigh-by-default change in Claude Code quietly raises the autonomous ceiling without asking for permission.</li>
+      <li>Snap just told 1,000 people that AI writes 65% of the code now and the math doesn't work anymore. This is the first major tech layoff publicly attributed to AI productivity — and it won't be the last.</li>
+      <li>OpenAI bought a media company. A daily tech show reaching millions of founders and operators now reports to OpenAI's political operative. The model war is becoming a narrative war — and OpenAI just acquired a broadcast tower.</li>
+    </ul>
+  </div>
+
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    Generated <span>April 19, 2026</span> &nbsp;·&nbsp; AI Influencers Forum &nbsp;·&nbsp; Powered by <span>Claude Sonnet 4.6</span>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

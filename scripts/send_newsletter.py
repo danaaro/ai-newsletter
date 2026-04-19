@@ -92,9 +92,9 @@ def send(html_path: Path) -> None:
     msg.attach(MIMEText(plain, "plain", "utf-8"))
     msg.attach(MIMEText(body_html, "html", "utf-8"))
 
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.ehlo()
-        server.starttls()
+    import ssl
+    ctx = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ctx) as server:
         server.login(GMAIL_ADDRESS, GMAIL_APP_PASS)
         server.sendmail(GMAIL_ADDRESS, RECIPIENTS, msg.as_string())
 

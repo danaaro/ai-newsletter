@@ -1,0 +1,92 @@
+{
+  "name": "AI Newsflash — Send Newsletter",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send-newsletter",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "1a2b3c4d-0001-0001-0001-000000000001",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.body.url ?? 'https://danaaro.github.io/ai-newsletter/runs/2026-03-30/ai-newsflash-march-30-2026_with_images.html' }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "1a2b3c4d-0002-0002-0002-000000000002",
+      "name": "Fetch Newsletter HTML",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "dana.aronovich@gmail.com",
+        "subject": "=🔥 AI Newsflash — {{ $now.format('MMMM d, yyyy') }}",
+        "emailType": "html",
+        "message": "={{ $json.data }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "1a2b3c4d-0003-0003-0003-000000000003",
+      "name": "Send via Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [680, 300],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_YOUR_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"sent\", \"to\": \"dana.aronovich@gmail.com\", \"timestamp\": \"{{ $now.toISO() }}\" }"
+      },
+      "id": "1a2b3c4d-0004-0004-0004-000000000004",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [{ "node": "Fetch Newsletter HTML", "type": "main", "index": 0 }]
+      ]
+    },
+    "Fetch Newsletter HTML": {
+      "main": [
+        [{ "node": "Send via Gmail", "type": "main", "index": 0 }]
+      ]
+    },
+    "Send via Gmail": {
+      "main": [
+        [{ "node": "Respond to Webhook", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
