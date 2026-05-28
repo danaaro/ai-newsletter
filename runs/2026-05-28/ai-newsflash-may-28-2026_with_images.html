@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🔥 AI Newsflash — May 28, 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:    #00D4FF; --pink:    #FF006E; --green:   #00FF9D;
+      --yellow:  #FFD60A; --bg:      #0A0A0F; --surface: rgba(10,10,22,0.82);
+      --border:  rgba(255,255,255,0.08); --text: #E8E8F0; --muted: #6B6B80; --radius: 14px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg) url("../../AI Influencers Background.png") center top / cover fixed; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.65; min-height: 100vh; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background: rgba(8,8,14,0.85); pointer-events: none; z-index: 0; }
+    .page { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+    header { position: relative; padding: 56px 0 16px; text-align: center; overflow: hidden; }
+    .header-bar { position: absolute; top: 0; left: -24px; right: -24px; height: 3px; background: linear-gradient(90deg, transparent, var(--pink), var(--blue), var(--green), transparent); background-size: 200% 100%; animation: slide-bar 4s linear infinite; }
+    @keyframes slide-bar { 0%{background-position:0% 0} 100%{background-position:200% 0} }
+    .byline { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 18px 8px 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 999px; animation: fade-up 0.5s ease both; }
+    .photo-orbit { position: relative; width: 64px; height: 64px; flex-shrink: 0; }
+    .byline-photo { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 0 14px rgba(0,212,255,0.2); }
+    .photo-ring { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(0,212,255,0.55); box-shadow: 0 0 8px rgba(0,212,255,0.35), 0 0 20px rgba(0,212,255,0.15); }
+    .orbit-spinner { position: absolute; inset: 0; border-radius: 50%; animation: orbit-spin 2.8s linear infinite; }
+    .orbit-ball { position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fff, var(--blue)); box-shadow: 0 0 6px var(--blue), 0 0 14px rgba(0,212,255,0.8); }
+    @keyframes orbit-spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .byline-info { text-align: left; }
+    .byline-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; margin-bottom: 3px; }
+    .byline-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; background: linear-gradient(90deg, #fff, var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+    .live-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,0,110,0.12); border: 1px solid rgba(255,0,110,0.35); border-radius: 999px; padding: 5px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--pink); text-transform: uppercase; margin-bottom: 22px; animation: fade-up 0.6s 0.05s ease both; }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pink); animation: pulse-dot 1.4s ease-in-out infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
+    .header-title { font-family: 'Syne', sans-serif; font-size: clamp(38px,7vw,72px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.0; background: linear-gradient(135deg, #fff 0%, var(--blue) 45%, var(--pink) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fade-up 0.7s 0.1s ease both; }
+    .header-date { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); letter-spacing: 0.1em; margin-top: 10px; animation: fade-up 0.7s 0.2s ease both; }
+    .header-sub { margin-top: 14px; font-size: 17px; font-weight: 300; color: rgba(232,232,240,0.55); letter-spacing: 0.02em; animation: fade-up 0.7s 0.3s ease both; }
+    .header-divider { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 16px auto 0; }
+    section { margin-top: 32px; animation: fade-up 0.7s ease both; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-icon { font-size: 22px; line-height: 1; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    .section-title.blue  { background: linear-gradient(90deg,#fff,var(--blue));  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+    .section-title.green { background: linear-gradient(90deg,#fff,var(--green)); -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+    .section-title.gold  { background: linear-gradient(90deg,#fff,var(--yellow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+    .section-count { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+    .card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 20px 18px 22px; margin-bottom: 12px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: border-color 0.25s, transform 0.25s, background 0.25s; overflow: hidden; display: grid; grid-template-columns: 1fr 56px; grid-template-rows: auto auto auto auto; column-gap: 16px; }
+    .card::before { content: ''; position: absolute; inset: 0; border-radius: var(--radius); background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 60%); pointer-events: none; }
+    .card:hover { border-color: rgba(255,255,255,0.16); background: rgba(10,10,22,0.92); transform: translateY(-2px); }
+    .card.accent-blue  { border-left: 3px solid var(--blue);  }
+    .card.accent-green { border-left: 3px solid var(--green); }
+    .card.accent-gold  { border-left: 3px solid var(--yellow);}
+    .card.accent-spicy { border-left: 3px solid var(--pink);  }
+    .card-headline { grid-column:1; grid-row:1; }
+    .card-what     { grid-column:1; grid-row:2; }
+    .card-why      { grid-column:1; grid-row:3; }
+    .card-footer   { grid-column:1; grid-row:4; }
+    .card-logo     { grid-column:2; grid-row:1/3; align-self:start; justify-self:center; }
+    .card-logo { width:52px; height:52px; border-radius:12px; overflow:hidden; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+    .card-logo img { width:36px; height:36px; object-fit:contain; border-radius:4px; }
+    .card-logo .logo-fallback { font-size:22px; line-height:1; }
+    .card-logo.dual { flex-direction:column; gap:3px; padding:4px; }
+    .card-logo.dual img { width:22px; height:22px; }
+    .card-headline { font-family:'Syne',sans-serif; font-size:15.5px; font-weight:700; color:#fff; line-height:1.3; margin-bottom:9px; }
+    .card-what { font-size:13.5px; color:rgba(232,232,240,0.72); line-height:1.6; margin-bottom:10px; }
+    .card-why { font-size:13px; font-weight:500; padding:7px 11px; border-radius:8px; margin-bottom:11px; line-height:1.5; }
+    .why-blue  { background:rgba(0,212,255,0.07);  border-left:2px solid rgba(0,212,255,0.5);  color:#7DE8FF; }
+    .why-green { background:rgba(0,255,157,0.07);  border-left:2px solid rgba(0,255,157,0.5);  color:#7DFFCC; }
+    .why-gold  { background:rgba(255,214,10,0.07); border-left:2px solid rgba(255,214,10,0.5); color:#FFE566; }
+    .why-spicy { background:rgba(255,0,110,0.07);  border-left:2px solid rgba(255,214,10,0.5); color:#FF9E4A; }
+    .why-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7; margin-right:6px; }
+    .card-footer { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .pill { display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:999px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.04em; text-decoration:none; transition:opacity 0.2s,transform 0.2s; white-space:nowrap; }
+    .pill:hover { opacity:0.75; transform:scale(0.97); }
+    .pill-blue  { background:rgba(0,212,255,0.10);  border:1px solid rgba(0,212,255,0.25);  color:var(--blue);  }
+    .pill-green { background:rgba(0,255,157,0.10);  border:1px solid rgba(0,255,157,0.25);  color:var(--green); }
+    .pill-gold  { background:rgba(255,214,10,0.10); border:1px solid rgba(255,214,10,0.25); color:var(--yellow);}
+    .pill-spicy { background:rgba(255,100,0,0.10);  border:1px solid rgba(255,100,0,0.25);  color:#FF9E4A; }
+    .pill::before { content:'↗'; font-size:9px; }
+    .gossip-tag { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; background:linear-gradient(90deg,var(--pink),var(--yellow)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; border:1px solid rgba(255,0,110,0.3); padding:2px 8px; border-radius:4px; margin-bottom:8px; grid-column:1; grid-row:1; }
+    .card.has-tag .card-headline { grid-row:2; }
+    .card.has-tag .card-what     { grid-row:3; }
+    .card.has-tag .card-why      { grid-row:4; }
+    .card.has-tag .card-footer   { grid-row:5; }
+    .card.has-tag .card-logo     { grid-row:1/4; }
+    .tldr { margin-top:52px; background:linear-gradient(135deg,rgba(0,212,255,0.05) 0%,rgba(255,0,110,0.05) 100%); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:32px 36px; position:relative; overflow:hidden; animation:fade-up 0.7s 0.9s ease both; }
+    .tldr::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,212,255,0.03),transparent 50%,rgba(255,0,110,0.03)); border-radius:18px; }
+    .tldr-title { font-family:'Syne',sans-serif; font-size:20px; font-weight:800; background:linear-gradient(90deg,var(--blue),var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:20px; }
+    .tldr-list { list-style:none; display:flex; flex-direction:column; gap:12px; }
+    .tldr-list li { display:flex; gap:12px; font-size:14px; line-height:1.55; color:rgba(232,232,240,0.85); }
+    .tldr-list li::before { content:'→'; color:var(--blue); font-family:'JetBrains Mono',monospace; font-size:13px; flex-shrink:0; padding-top:2px; }
+    footer { text-align:center; margin-top:60px; padding-top:24px; border-top:1px solid var(--border); font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.08em; }
+    footer span { color:var(--pink); }
+    .pdf-btn { position:fixed; bottom:32px; right:32px; z-index:100; display:flex; align-items:center; gap:8px; padding:12px 22px; background:linear-gradient(135deg,rgba(0,212,255,0.15),rgba(255,0,110,0.15)); border:1px solid rgba(0,212,255,0.35); border-radius:999px; color:#fff; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.06em; cursor:pointer; backdrop-filter:blur(20px); transition:all 0.25s; }
+    .pdf-btn:hover { background:linear-gradient(135deg,rgba(0,212,255,0.25),rgba(255,0,110,0.25)); border-color:rgba(0,212,255,0.6); transform:translateY(-2px); }
+    @keyframes fade-up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    @media print { @page{margin:15mm 12mm;size:A4} body{background:#0A0A0F !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:13px} .pdf-btn{display:none !important} .page{padding:0 8px 20px;max-width:100%} .card{break-inside:avoid;margin-bottom:8px;backdrop-filter:none} .tldr{break-inside:avoid} }
+
+    /* ── HERO IMAGE STRIP ── */
+    .card.has-hero { grid-template-columns: 1fr; padding-top: 0; }
+    .card-hero { grid-column: 1 / -1; grid-row: 1; position: relative; height: 165px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; margin-bottom: 16px; }
+    .card-hero > img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s ease; }
+    .card:hover .card-hero > img { transform: scale(1.04); }
+    .card-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, var(--surface) 100%); pointer-events: none; }
+    .card-hero-logo { position: absolute; bottom: 10px; right: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 10px; background: rgba(8,8,14,0.80); border: 1px solid rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; overflow: hidden; backdrop-filter: blur(10px); }
+    .card-hero-logo img { width: 26px; height: 26px; object-fit: contain; border-radius: 4px; }
+    .card-hero-logo .logo-fallback { font-size: 20px; line-height: 1; }
+    .card.has-hero > .card-logo { display: none; }
+    .card.has-hero .card-headline { grid-row: 2; }
+    .card.has-hero .card-what     { grid-row: 3; }
+    .card.has-hero .card-why      { grid-row: 4; }
+    .card.has-hero .card-footer   { grid-row: 5; }
+    .card.has-hero.has-tag .gossip-tag,
+    .card.has-hero.has-tag .date-tag  { grid-row: 2; }
+    .card.has-hero.has-tag .card-headline { grid-row: 3; }
+    .card.has-hero.has-tag .card-what     { grid-row: 4; }
+    .card.has-hero.has-tag .card-why      { grid-row: 5; }
+    .card.has-hero.has-tag .card-footer   { grid-row: 6; }
+
+    /* ── HERO IMAGE STRIP ────────────────────────────────────────────── */
+    .card.has-hero {
+      grid-template-columns: 1fr;
+      padding-top: 0;
+    }
+    .card-hero {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      position: relative;
+      height: 165px;
+      overflow: hidden;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin-bottom: 16px;
+    }
+    .card-hero > img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .card:hover .card-hero > img { transform: scale(1.04); }
+    /* gradient fade hero → card body */
+    .card-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 45%, var(--surface) 100%);
+      pointer-events: none;
+    }
+    /* logo badge overlaid bottom-right of hero */
+    .card-hero-logo {
+      position: absolute; bottom: 10px; right: 12px; z-index: 2;
+      width: 38px; height: 38px; border-radius: 10px;
+      background: rgba(8,8,14,0.80);
+      border: 1px solid rgba(255,255,255,0.14);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; backdrop-filter: blur(10px);
+    }
+    .card-hero-logo img { width: 26px; height: 26px; object-fit: contain; border-radius: 4px; }
+    .card-hero-logo .logo-fallback { font-size: 20px; line-height: 1; }
+    /* hide the old logo column when hero is present */
+    .card.has-hero > .card-logo { display: none; }
+    /* grid row shifts — standard card */
+    .card.has-hero .card-headline { grid-row: 2; }
+    .card.has-hero .card-what     { grid-row: 3; }
+    .card.has-hero .card-why      { grid-row: 4; }
+    .card.has-hero .card-footer   { grid-row: 5; }
+    /* grid row shifts — card with a tag (date-tag / gossip-tag) */
+    .card.has-hero.has-tag .gossip-tag,
+    .card.has-hero.has-tag .date-tag  { grid-row: 2; }
+    .card.has-hero.has-tag .card-headline { grid-row: 3; }
+    .card.has-hero.has-tag .card-what     { grid-row: 4; }
+    .card.has-hero.has-tag .card-why      { grid-row: 5; }
+    .card.has-hero.has-tag .card-footer   { grid-row: 6; }
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()"><span>⬇</span> Save as PDF</button>
+<div class="page">
+<header>
+<div class="header-bar"></div>
+<div class="live-badge"><span class="live-dot"></span>Live Briefing · AI Influencers Forum</div>
+<h1 class="header-title">AI Newsflash</h1>
+<p class="header-date">MAY 28, 2026  ·  LAST 7 DAYS</p>
+<p class="header-sub">"The week Google went fully agentic, Anthropic crossed $900B, and Apple opened Siri to rivals"</p>
+<div class="byline">
+<div class="photo-orbit">
+<img alt="Dana Aronovich" class="byline-photo" src="../../Image (13).jpg"/>
+<div class="photo-ring"></div>
+<div class="orbit-spinner"><div class="orbit-ball"></div></div>
+</div>
+<div class="byline-info">
+<span class="byline-label">Built by</span>
+<span class="byline-name">Dana Aronovich</span>
+</div>
+</div>
+<div class="header-divider"></div>
+</header>
+<!-- ══ BIG MOVES ══ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🧠</span>
+<span class="section-title blue">Big Moves</span>
+<span class="section-count">3 items</span>
+</div>
+<!-- 1 · Google I/O 2026 -->
+<div class="card accent-spicy has-tag has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_01_Google_I_O_2026___Gemini_3_5_Flash__Gemini_Omni.jpg"/><div class="card-hero-logo">
+<img alt="Google" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/google.com">
+<span class="logo-fallback" style="display:none">🔍</span>
+</img></div></div>
+<div class="gossip-tag">🔴 Breaking · This Week</div>
+<div class="card-logo">
+<img alt="Google" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/google.com"/>
+<span class="logo-fallback" style="display:none">🔍</span>
+</div>
+<div class="card-headline">Google I/O 2026 — Gemini 3.5 Flash, Gemini Omni, Antigravity 2.0, and 100+ announcements in one week</div>
+<div class="card-what">Google dominated the week with its I/O 2026 conference. The headline model is Gemini 3.5 Flash: frontier-level intelligence at 4× the speed of comparable models, outperforming Gemini 3.1 Pro on coding and agentic benchmarks, priced at $1.50/$9 per 1M tokens. Alongside it came Gemini Omni, a unified multimodal model. The biggest architectural shift: Antigravity 2.0, now a standalone desktop application that acts as a hub for managing cohorts of autonomous agents, paired with a new CLI and Managed Agents API that provisions remote sandboxes for agents to reason, plan, call tools, execute code, and browse the web in a single API call. Google also launched Science Skills — deep integration with 30+ life science databases — aimed squarely at pharma and biotech workflows.</div>
+<div class="card-why why-spicy"><span class="why-label">Why it matters</span>Google is not competing on model size — it's competing on agent infrastructure. Antigravity 2.0 as a standalone desktop app, combined with a Managed Agents API, positions Google as the platform layer for enterprise agent deployment. This is Google's clearest answer yet to OpenAI's Codex and Anthropic's Claude Code — and it comes with the full weight of Google Cloud, Search, and Android behind it.</div>
+<div class="card-footer">
+<a class="pill pill-spicy" href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank">blog.google</a>
+<a class="pill pill-spicy" href="https://cybernews.com/ai-news/google-io-2026-gemini-omni-antigravity-agentic-ai/" target="_blank">cybernews.com</a>
+<a class="pill pill-spicy" href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank">developers.googleblog.com</a>
+</div>
+</div>
+<!-- 2 · Anthropic $30B / $900B -->
+<div class="card accent-spicy has-tag has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_02_Anthropic_closes__30B_at__900B_valuation___Q2_re.jpg"/><div class="card-hero-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com">
+<span class="logo-fallback" style="display:none">🧠</span>
+</img></div></div>
+<div class="gossip-tag">🔴 Breaking · Sunday</div>
+<div class="card-logo">
+<img alt="Anthropic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/anthropic.com"/>
+<span class="logo-fallback" style="display:none">🧠</span>
+</div>
+<div class="card-headline">Anthropic closes $30B at $900B valuation — Q2 revenue hits $10.9B, first-ever quarterly profit</div>
+<div class="card-what">Anthropic officially closed a $30 billion growth round at a pre-money valuation above $900 billion this week, surpassing OpenAI's $852B private market valuation. Lead investors included Sequoia Capital, Dragoneer, Altimeter, and Greenoaks, each committing approximately $2 billion. The company projected Q2 2026 revenue of $10.9 billion — up 130% from Q1's $4.8 billion — alongside its first-ever quarterly operating profit of $559 million. Enterprise deployments are scaling fast: PwC signed for 30,000 trained and certified Claude users; KPMG activated 276,000 seats across its Digital Gateway platform; EY struck a separate $1B deal with Microsoft. The entire Big Four is now standardizing on AI platforms.</div>
+<div class="card-why why-spicy"><span class="why-label">Why it matters</span>First quarterly profit at 130% revenue growth with $30B raised — Anthropic is not a research lab anymore, it's a fast-scaling enterprise software business. The Big Four sweeping Claude across hundreds of thousands of professional services staff means AI-assisted work is becoming the default standard in consulting, audit, and advisory — the industries that touch every Fortune 500 company.</div>
+<div class="card-footer">
+<a class="pill pill-spicy" href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank">bloomberg.com</a>
+<a class="pill pill-spicy" href="https://www.resultsense.com/news/2026-05-20-anthropic-kpmg-276k-alliance/" target="_blank">resultsense.com</a>
+<a class="pill pill-spicy" href="https://www.anthropic.com/news/pwc-expanded-partnership" target="_blank">anthropic.com</a>
+</div>
+</div>
+<!-- 3 · Apple iOS 27 -->
+<div class="card accent-blue has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_03_Apple_iOS_27_opens_Siri_to_Claude__Gemini__and_G.jpg"/><div class="card-hero-logo">
+<img alt="Apple" onerror="this.style.display='none'" src="https://logo.clearbit.com/apple.com">
+<img alt="Anthropic" onerror="this.style.display='none'" src="https://logo.clearbit.com/anthropic.com"/>
+</img></div></div>
+<div class="card-logo dual">
+<img alt="Apple" onerror="this.style.display='none'" src="https://logo.clearbit.com/apple.com"/>
+<img alt="Anthropic" onerror="this.style.display='none'" src="https://logo.clearbit.com/anthropic.com"/>
+</div>
+<div class="card-headline">Apple iOS 27 opens Siri to Claude, Gemini, and Grok — ChatGPT exclusivity ends this fall</div>
+<div class="card-what">Apple confirmed this week that iOS 27, iPadOS 27, and macOS 27 will introduce an AI Extensions framework letting users choose their preferred AI model for Siri, Writing Tools, and Image Playground. Google, Anthropic, and xAI are expected to add Extensions support to their existing iOS apps. Once installed, a single toggle in Settings routes all Apple Intelligence requests to the chosen model. Different AI voices can be assigned to different tasks — Apple's own voice for on-device queries, Claude's voice for responses requiring external knowledge. iOS 27 will be formally introduced at WWDC on June 8.</div>
+<div class="card-why why-blue"><span class="why-label">Why it matters</span>Apple turning Siri into a routing layer — rather than a destination — is one of the most consequential platform decisions in tech this decade. Over 1.5 billion active Apple devices become distribution surface for every major AI lab simultaneously. The lab that earns the default slot for the most common query types wins a reach no amount of advertising can match. This reshapes the consumer AI race entirely.</div>
+<div class="card-footer">
+<a class="pill pill-blue" href="https://9to5mac.com/2026/05/05/ios-27-will-let-you-choose-between-gemini-claude-and-more-for-ai-features-report/" target="_blank">9to5mac.com</a>
+<a class="pill pill-blue" href="https://www.macrumors.com/2026/05/05/ios-27-third-party-chatbots-apple-intelligence/" target="_blank">macrumors.com</a>
+<a class="pill pill-blue" href="https://letsdatascience.com/blog/apple-ios-27-extensions-claude-grok-third-party-ai" target="_blank">letsdatascience.com</a>
+</div>
+</div>
+</section>
+<!-- ══ NEW TOOLS & RELEASES ══ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🛠</span>
+<span class="section-title green">New Tools &amp; Releases</span>
+<span class="section-count">3 items</span>
+</div>
+<!-- 4 · Microsoft Copilot Studio computer-use GA -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_04_Microsoft_Copilot_Studio_computer_use_goes_GA.jpg"/><div class="card-hero-logo">
+<img alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/microsoft.com">
+<span class="logo-fallback" style="display:none">🪟</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/microsoft.com"/>
+<span class="logo-fallback" style="display:none">🪟</span>
+</div>
+<div class="card-headline">Microsoft Copilot Studio computer-use goes GA — agents now operate desktops and apps like humans</div>
+<div class="card-what">Microsoft made computer-use agents in Copilot Studio generally available this week across all commercial geographies, following months of limited preview. The capability lets agents interact directly with desktop applications and web browsers exactly as a human user would — clicking, typing, navigating, and extracting data from any application without requiring API integrations or custom connectors. The May 26 update also added governance and compliance features for enterprise deployments. Separately, Microsoft's Agent 365, priced at $15/user/month, is now live as a control plane managing agents built on Copilot Studio, Azure Foundry, and third-party platforms.</div>
+<div class="card-why why-green"><span class="why-label">Why it matters</span>Computer-use going generally available means enterprises can now automate any desktop workflow without custom code — ERP systems, legacy applications, internal tools — all become agent-accessible. Paired with Agent 365's governance layer, Microsoft is offering the same pitch as RPA vendors like UiPath and Automation Anywhere, but backed by a frontier model and a $100B+ cloud platform. This directly threatens the entire legacy automation industry.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026" target="_blank">buildfastwithai.com</a>
+<a class="pill pill-green" href="https://llm-stats.com/ai-news" target="_blank">llm-stats.com</a>
+</div>
+</div>
+<!-- 5 · OpenAI GPT-Realtime-2 + Translate -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_05_OpenAI_launches_GPT_Realtime_2_and_Realtime_Tran.jpg"/><div class="card-hero-logo">
+<img alt="OpenAI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/openai.com">
+<span class="logo-fallback" style="display:none">🎙</span>
+</img></div></div>
+<div class="card-logo">
+<img alt="OpenAI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" src="https://logo.clearbit.com/openai.com"/>
+<span class="logo-fallback" style="display:none">🎙</span>
+</div>
+<div class="card-headline">OpenAI launches GPT-Realtime-2 and Realtime-Translate — conversational voice AI that keeps pace with humans</div>
+<div class="card-what">OpenAI released two new voice models via its API this week. GPT-Realtime-2 is a next-generation conversational voice model designed to handle natural dialogue with improved prosody, reduced latency, and realistic vocal simulation across multiple speaking styles. GPT-Realtime-Translate is purpose-built for real-time speech translation, designed to "keep pace" with human conversational speed — translating spoken language continuously without perceptible lag. Both models are available through the Realtime API for developers building voice applications, translation tools, and live customer service products.</div>
+<div class="card-why why-green"><span class="why-label">Why it matters</span>Real-time translation that genuinely keeps pace with conversation is not a demo feature — it's a product that removes language as a barrier in customer service, sales calls, medical consultations, and live meetings at global scale. Combined with GPT-Realtime-2's improved naturalness, OpenAI is building a voice layer that could displace dedicated speech-AI vendors the same way ChatGPT displaced earlier chatbot platforms.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/" target="_blank">techcrunch.com</a>
+<a class="pill pill-green" href="https://releasebot.io/updates/openai" target="_blank">releasebot.io</a>
+</div>
+</div>
+<!-- 6 · SubQ non-transformer -->
+<div class="card accent-green has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_06_SubQ_launches_the_first_commercial_non_transform.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">⚡</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">⚡</span>
+</div>
+<div class="card-headline">SubQ launches the first commercial non-transformer model — 12M token context, $29M seed</div>
+<div class="card-what">Subquadratic launched SubQ on May 5 with $29 million in seed funding, introducing what it claims is the first commercially available model built entirely on a non-transformer architecture. SubQ features a 12-million token context window — the largest context of any model currently available — enabled by its linear-scaling architecture that doesn't suffer from the quadratic attention cost that limits transformer context lengths. The model is designed for tasks requiring deep long-document analysis: legal review, scientific literature synthesis, full-codebase reasoning, and financial document processing. Benchmarks against transformer-based models of comparable parameter counts are pending independent verification.</div>
+<div class="card-why why-gold"><span class="why-label">Why it matters</span>Transformers have been the unchallenged foundation of every major language model since 2017. If SubQ's architecture scales, it threatens to obsolete the hardware stacks, training pipelines, and inference infrastructure that the entire industry — including NVIDIA — has been built around. A 12M token context is not an incremental improvement; it's an architectural statement that the transformer era may have a ceiling.</div>
+<div class="card-footer">
+<a class="pill pill-green" href="https://whatllm.org/blog/new-ai-models-may-2026" target="_blank">whatllm.org</a>
+<a class="pill pill-green" href="https://www.digitalapplied.com/blog/ai-model-releases-may-2026-complete-tracker" target="_blank">digitalapplied.com</a>
+</div>
+</div>
+</section>
+<!-- ══ WORLD & POLICY ══ -->
+<section>
+<div class="section-header">
+<span class="section-icon">🌍</span>
+<span class="section-title gold">World &amp; Policy</span>
+<span class="section-count">2 items</span>
+</div>
+<!-- 7 · China travel bans -->
+<div class="card accent-gold has-tag has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_07_China_bans_AI_researchers_from_overseas_travel.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">🛂</span>
+</div></div>
+<div class="gossip-tag">🔴 Breaking · Monday</div>
+<div class="card-logo">
+<span class="logo-fallback">🛂</span>
+</div>
+<div class="card-headline">China bans AI researchers from overseas travel — DeepSeek and Alibaba staff need government approval to leave</div>
+<div class="card-what">Bloomberg reported on May 26 that China has extended overseas travel restrictions to top AI professionals at private firms including DeepSeek and Alibaba. Researchers, founders, and executives working on advanced AI deemed strategically important now require government approval before traveling internationally. The policy marks a significant escalation: China has long restricted state-affiliated researchers, but extending these controls to the private sector is new. Neither DeepSeek nor Alibaba commented publicly. Similar restrictions for DeepSeek executives were first reported in December 2025, but the scope has now expanded to a broader class of AI talent across multiple private companies.</div>
+<div class="card-why why-gold"><span class="why-label">Why it matters</span>China is treating its frontier AI talent as a strategic asset — literally preventing it from leaving the country. This is a signal that Beijing views advanced AI as equivalent to nuclear or aerospace expertise in terms of national security sensitivity. For Western AI labs recruiting from China, this creates new barriers. For global AI researchers, it's a preview of how governments may increasingly treat AI expertise as sovereign intellectual property.</div>
+<div class="card-footer">
+<a class="pill pill-gold" href="https://www.bloomberg.com/news/articles/2026-05-26/china-expands-travel-curbs-to-top-ai-talent-at-private-firms" target="_blank">bloomberg.com</a>
+<a class="pill pill-gold" href="https://seekingalpha.com/news/4596710-china-limits-overseas-travel-for-top-ai-talent-at-alibaba-deepseek-report" target="_blank">seekingalpha.com</a>
+<a class="pill pill-gold" href="https://ia.acs.org.au/article/2026/china-restricts-travel-of-ai-experts-amid-tech-war.html" target="_blank">acs.org.au</a>
+</div>
+</div>
+<!-- 8 · Pope Leo XIV encyclical -->
+<div class="card accent-gold has-hero"><div class="card-hero"><img alt="" loading="lazy" src="images/hero_08_Pope_Leo_XIV_s_first_encyclical___Magnifica_Huma.jpg"/><div class="card-hero-logo">
+<span class="logo-fallback">✝️</span>
+</div></div>
+<div class="card-logo">
+<span class="logo-fallback">✝️</span>
+</div>
+<div class="card-headline">Pope Leo XIV's first encyclical: "Magnifica Humanitas" — human dignity in the age of AI, co-presented with Anthropic</div>
+<div class="card-what">Pope Leo XIV released his first papal encyclical on May 25, titled Magnifica Humanitas ("The Magnificence of Humanity"), centering on "the protection of the human person in the age of artificial intelligence." The document was co-presented alongside Anthropic co-founder Christopher Olah — a striking pairing of theological authority and AI safety research. The encyclical calls on AI developers to treat human dignity as a non-negotiable constraint, criticizes systems designed to manipulate or replace human judgment, and calls for international governance frameworks that place human welfare above economic competition. It is the first papal document to directly address artificial intelligence as a theological and ethical matter.</div>
+<div class="card-why why-gold"><span class="why-label">Why it matters</span>When the Vatican issues a formal doctrinal document on AI — and presents it with an AI safety researcher — it signals that the ethical dimensions of this technology have moved beyond academic debate into institutional moral authority. The encyclical reaches 1.4 billion Catholics globally and will shape how policymakers, regulators, and corporate boards in Catholic-majority countries frame AI governance conversations for years.</div>
+<div class="card-footer">
+<a class="pill pill-gold" href="https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026" target="_blank">buildfastwithai.com</a>
+<a class="pill pill-gold" href="https://unrot.co/blogs/weekly-ai-news-may-24-28-2026" target="_blank">unrot.co</a>
+</div>
+</div>
+</section>
+<!-- ══ TL;DR ══ -->
+<div class="tldr">
+<div class="tldr-title">⚡ TL;DR — 3 things to remember</div>
+<ul class="tldr-list">
+<li>Google I/O made Antigravity 2.0 a standalone agent platform, and Anthropic closed $30B at $900B with its first quarterly profit. Two different companies, same signal: the agentic AI era is now a funded, shipping reality — not a roadmap item.</li>
+<li>Apple is turning Siri into an AI router for Claude, Gemini, and Grok. Over 1.5 billion Apple devices become the distribution layer for every major AI lab at once. The consumer AI race is no longer about who builds the best chatbot — it's about who earns the default on the world's most-used personal devices.</li>
+<li>China barred AI researchers at DeepSeek and Alibaba from leaving the country. Governments are now treating frontier AI expertise as sovereign strategic infrastructure — a threshold that, once crossed, reshapes how talent, research, and models flow across borders.</li>
+</ul>
+</div>
+<footer>
+    Generated <span>May 28, 2026</span>  ·  AI Influencers Forum  ·  Powered by <span>Claude Sonnet 4.6</span>
+</footer>
+</div>
+</body>
+</html>
